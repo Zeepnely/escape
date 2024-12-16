@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2prwvqmt65l6"]
+
+[ext_resource type="Script" path="res://UI/hud.gd" id="1_avwcf"]
+[ext_resource type="PackedScene" uid="uid://bvobw60cr8xuo" path="res://UI/Menues/Options_menu.tscn" id="2_gh0ud"]
+[ext_resource type="PackedScene" uid="uid://b4yxdnc8xfaft" path="res://UI/Menues/pause_menue.tscn" id="2_h00br"]
+[ext_resource type="PackedScene" uid="uid://bmtuyd6cfc6eq" path="res://UI/Menues/part_change_menue.tscn" id="3_pqd6d"]
+[ext_resource type="PackedScene" uid="uid://dvm3s5tbkflwh" path="res://UI/Menues/inventory_stuff/player_inventory.tscn" id="5_n2k7h"]
+[ext_resource type="PackedScene" uid="uid://ganptwvsu6r7" path="res://UI/Menues/Admin_menue.tscn" id="7_uf0u0"]
+
+[node name="Hud" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_avwcf")
+
+[node name="puase_menue" parent="." instance=ExtResource("2_h00br")]
+layout_mode = 1
+mouse_filter = 1
+
+[node name="PartChangeMenue" parent="." instance=ExtResource("3_pqd6d")]
+layout_mode = 1
+mouse_filter = 1
+
+[node name="OptionsMenu" parent="." instance=ExtResource("2_gh0ud")]
+layout_mode = 1
+mouse_filter = 1
+
+[node name="PlayerInventory" parent="." instance=ExtResource("5_n2k7h")]
+layout_mode = 1
+mouse_filter = 1
+
+[node name="AdminMenue" parent="." instance=ExtResource("7_uf0u0")]
+layout_mode = 1

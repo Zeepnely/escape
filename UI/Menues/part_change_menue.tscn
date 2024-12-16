@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmtuyd6cfc6eq"]
+
+[ext_resource type="Script" path="res://UI/Menues/part_change_menue.gd" id="1_evh15"]
+[ext_resource type="PackedScene" uid="uid://bbqkx52cvdkgc" path="res://UI/Menues/inventory_stuff/item_slot_two.tscn" id="2_2ydds"]
+[ext_resource type="PackedScene" uid="uid://ckp61fwld1g4u" path="res://UI/Menues/inventory_stuff/off_plannet_inventory.tscn" id="2_513lb"]
+
+[node name="PartChangeMenue" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_evh15")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+split_offset = 235
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HSplitContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HSplitContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_bottom = 110
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 125
+alignment = 1
+
+[node name="ItemSlotTwo" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_2ydds")]
+layout_mode = 2
+slot_filter = "arm"
+amount_filter = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 250
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 125
+alignment = 1
+
+[node name="ItemSlotTwo" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer3" instance=ExtResource("2_2ydds")]
+layout_mode = 2
+slot_filter = "head"
+amount_filter = 1
+slot_id = 1
+
+[node name="ItemSlotTwo2" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer3" instance=ExtResource("2_2ydds")]
+layout_mode = 2
+slot_filter = "leg"
+amount_filter = 1
+slot_id = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_bottom = 110
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 125
+
+[node name="ItemSlotTwo" parent="MarginContainer/HSplitContainer/MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer2" instance=ExtResource("2_2ydds")]
+layout_mode = 2
+slot_filter = "arm"
+amount_filter = 1
+slot_id = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="OffPlannetInventory" parent="MarginContainer/HSplitContainer/MarginContainer2" instance=ExtResource("2_513lb")]
+layout_mode = 2
+mouse_filter = 1
+show_drop_use = true
+
+[connection signal="gui_input" from="MarginContainer/HSplitContainer/MarginContainer2/OffPlannetInventory" to="." method="_on_off_plannet_inventory_gui_input"]

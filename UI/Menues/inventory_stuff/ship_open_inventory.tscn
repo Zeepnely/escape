@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqk7nveb2md6a"]
+
+[ext_resource type="Script" path="res://UI/Menues/inventory_stuff/ship_open_inventory.gd" id="1_343ih"]
+[ext_resource type="PackedScene" uid="uid://blyyu7ja5bf28" path="res://UI/Menues/inventory_stuff/ship_inventory.tscn" id="2_7w7pe"]
+
+[node name="ShipOpenInventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_343ih")
+
+[node name="ShipInventory" parent="." instance=ExtResource("2_7w7pe")]
+layout_mode = 1

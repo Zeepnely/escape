@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://4olfln0dw7cc"]
+
+[ext_resource type="Script" path="res://levals/main_world.gd" id="1_ggevm"]
+[ext_resource type="PackedScene" uid="uid://d2prwvqmt65l6" path="res://UI/hud.tscn" id="2_wf4qs"]
+
+[node name="main_world" type="Node3D" node_paths=PackedStringArray("hud")]
+script = ExtResource("1_ggevm")
+player_scene = "res://player/ship_player.tscn"
+hud = NodePath("Hud")
+
+[node name="Hud" parent="." instance=ExtResource("2_wf4qs")]
+mouse_filter = 2
