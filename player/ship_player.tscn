@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://6mddbv307euw"]
+[gd_scene load_steps=13 format=3 uid="uid://6mddbv307euw"]
 
 [ext_resource type="Script" path="res://components/stateMachene.gd" id="1_7dxr0"]
 [ext_resource type="Script" path="res://player/ship_player.gd" id="1_s4ia2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://player/falling_ship.gd" id="5_umswd"]
 [ext_resource type="Script" path="res://player/idle_ship.gd" id="6_on02l"]
 [ext_resource type="Script" path="res://player/jump_ship.gd" id="7_tl1av"]
+[ext_resource type="Script" path="res://player/running_state.gd" id="9_ei2vd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vlw8v"]
 
@@ -49,7 +50,7 @@ collision_mask = 2
 
 [node name="oneinfront" type="RayCast3D" parent="body"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.249417, -0.784098)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.512842, -1.06146)
 target_position = Vector3(0, -1.1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -74,3 +75,6 @@ script = ExtResource("6_on02l")
 
 [node name="jumpShip" type="Node" parent="stateMachene"]
 script = ExtResource("7_tl1av")
+
+[node name="runningState" type="Node" parent="stateMachene"]
+script = ExtResource("9_ei2vd")

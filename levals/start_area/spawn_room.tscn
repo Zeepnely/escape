@@ -630,7 +630,7 @@ mesh = SubResource("ArrayMesh_envkc")
 skeleton = NodePath("")
 
 [node name="Sketchfab_Scene" type="Node3D" parent="."]
-transform = Transform3D(2.87177, 0, 16.022, 0, 7.595, 0, -9.83918, 0, 4.67636, 298.984, -18.72, -37.8)
+transform = Transform3D(2.61142, 0, 6.16603, 0, 3.408, 0, -3.78688, 0, 4.25207, 290.405, -14.9126, -41.4481)
 
 [node name="defaultMaterial" type="MeshInstance3D" parent="Sketchfab_Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, -4.37114e-08, 1.49012e-08, 4.37114e-08, 1, 0, 0, 0)
@@ -658,5 +658,37 @@ transform = Transform3D(1, 1.77636e-15, 0, -1.09544e-15, 1, -4.37114e-08, 4.4703
 shape = SubResource("ConcavePolygonShape3D_lsia1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/StaticBody3D"]
+transform = Transform3D(1, 1.77636e-15, 0, 0, 1, -4.37114e-08, 2.98023e-08, 4.37114e-08, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_lch54")
+
+[node name="Sketchfab_Scene2" type="Node3D" parent="."]
+transform = Transform3D(0.927246, 0, 7.57803, 0, 3.516, 0, -4.65352, 0, 1.50997, 313.35, -22.169, -33.867)
+
+[node name="defaultMaterial" type="MeshInstance3D" parent="Sketchfab_Scene2"]
+transform = Transform3D(1, 0, 0, 0, 1, -4.37114e-08, 1.49012e-08, 4.37114e-08, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_arl3h")
+skeleton = NodePath("")
+
+[node name="defaultMaterial3" type="MeshInstance3D" parent="Sketchfab_Scene2"]
+transform = Transform3D(1, 0, 0, -1.09544e-15, 1, -4.37114e-08, 2.98023e-08, 4.37114e-08, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_wpj6x")
+skeleton = NodePath("")
+
+[node name="defaultMaterial2" type="MeshInstance3D" parent="Sketchfab_Scene2"]
+transform = Transform3D(1, 0, 0, -1.09544e-15, 1, -4.37114e-08, 2.98023e-08, 4.37114e-08, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1n8gj")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene2"]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Sketchfab_Scene2/StaticBody3D"]
+transform = Transform3D(1, 1.77636e-15, 0, -1.09544e-15, 1, -4.37114e-08, 4.47035e-08, 4.37114e-08, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_7p8ct")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sketchfab_Scene2/StaticBody3D"]
+transform = Transform3D(1, 1.77636e-15, 0, -1.09544e-15, 1, -4.37114e-08, 4.47035e-08, 4.37114e-08, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_lsia1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene2/StaticBody3D"]
 transform = Transform3D(1, 1.77636e-15, 0, 0, 1, -4.37114e-08, 2.98023e-08, 4.37114e-08, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_lch54")
