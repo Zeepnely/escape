@@ -6,6 +6,8 @@ var rooms : Dictionary = {"spawn_room": "res://levals/start_area/spawn_room.tscn
 
 @export var player_scene: String
 @export var hud: Control
+@export var cutscene: Node3D
+
 
 var player: CharacterBody3D
 var hand: Node3D
@@ -16,6 +18,9 @@ func _ready() -> void:
 	menue = add_scene(rooms["main_menue"])
 	
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("f"):
+		cutscene.start_cutscene("gdgd")
 
 
 func exit_game():
@@ -32,6 +37,7 @@ func start():
 	player.position.y = -29.793
 	player.position.x = 371.005
 	player.position.z = 7.803
+	player.camara.on_change_camara()
 	
 	
 func add_scene(scene: String) -> Node:

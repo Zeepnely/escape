@@ -18,8 +18,7 @@ var time = 0
 
 var wantfov = 0
 
-func _ready() -> void:
-	pass
+
 
 func _process(delta):
 	if camera.current == true:

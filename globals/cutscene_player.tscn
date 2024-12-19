@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dje2y2nbftlhp"]
+
+[ext_resource type="Script" path="res://globals/cutscene_player.gd" id="1_5215u"]
+
+[node name="CutscenePlayer" type="Node3D" node_paths=PackedStringArray("camara")]
+script = ExtResource("1_5215u")
+camara = NodePath("Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="."]
