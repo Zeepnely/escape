@@ -6,9 +6,9 @@ const JUMP_VELOCITY = 4.5
 
 @export var scene: String
 @export var hand: Node3D
+@export var camara: Node3D
 
 @onready var body = $body
-@onready var camara = $body/head/Camra
 @onready var head = $body/head
 
 

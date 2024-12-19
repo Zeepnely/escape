@@ -16,10 +16,11 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eroyd"]
 
-[node name="ShipPlayer" type="CharacterBody3D" node_paths=PackedStringArray("hand") groups=["SaveDataNeed"]]
+[node name="ShipPlayer" type="CharacterBody3D" node_paths=PackedStringArray("hand", "camara") groups=["SaveDataNeed"]]
 script = ExtResource("1_s4ia2")
 scene = "res://Players/ship_player/ship_player.tscn"
 hand = NodePath("body/head/Hand")
+camara = NodePath("body/head/Camra")
 
 [node name="body" type="Node3D" parent="."]
 
