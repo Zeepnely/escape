@@ -37,7 +37,6 @@ func start():
 	player.position.y = -29.793
 	player.position.x = 371.005
 	player.position.z = 7.803
-	player.camara.on_change_camara()
 	
 	
 func add_scene(scene: String) -> Node:
