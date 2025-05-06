@@ -15,7 +15,8 @@ var menue
 var current_room: Node3D
 
 func _ready() -> void:
-	menue = add_scene(rooms["main_menue"])
+	menue = add_scene(rooms["main_menue"],0)
+	hud.on_main_menue = true
 	
 
 func _input(event: InputEvent) -> void:
@@ -25,22 +26,26 @@ func _input(event: InputEvent) -> void:
 
 func exit_game():
 	remove_child(current_room)
+	hud.on_main_menue = true
 	add_child(menue)
 	menue._ready()
 
 func start():
 	remove_child(menue)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	add_scene(rooms["spawn_room"])
-	add_scene(rooms["world_enviroment"])
-	player = add_scene(player_scene)
+	hud.on_main_menue = false
+	add_scene(rooms["spawn_room"],-1)
+	add_scene(rooms["world_enviroment"],-1)
+	player = add_scene(player_scene,-1)
 	player.position.y = -29.793
 	player.position.x = 371.005
 	player.position.z = 7.803
 	
 	
-func add_scene(scene: String) -> Node:
+func add_scene(scene: String, pos: int) -> Node:
 	var temp_scene = load(scene).instantiate()
 	add_child(temp_scene)
+	if pos <= 0:
+		move_child(temp_scene, pos)
 	return temp_scene
 	

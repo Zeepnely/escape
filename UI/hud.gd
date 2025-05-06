@@ -28,6 +28,7 @@ func open_the_menue(menue_name: String):
 	fix_order()
 	open_menues.append(menue_name)
 	menues.get(menue_name).open()
+	mouse_filter = Control.MOUSE_FILTER_STOP
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_slash") and !menue_open:
@@ -51,6 +52,7 @@ func close_menues():
 			open_menue = open_menues[len(open_menues) - 1]
 			fix_order()
 		if open_menues.is_empty():
+			mouse_filter = Control.MOUSE_FILTER_IGNORE
 			if !on_main_menue:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			menue_open = false
