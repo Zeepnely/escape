@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://6mddbv307euw"]
 
-[ext_resource type="Script" path="res://components/stateMachene.gd" id="1_7dxr0"]
-[ext_resource type="Script" path="res://player/ship_player.gd" id="1_s4ia2"]
-[ext_resource type="Script" path="res://player/node.gd" id="2_0ufj0"]
+[ext_resource type="Script" uid="uid://c2qwkqbk3njdp" path="res://components/stateMachene.gd" id="1_7dxr0"]
+[ext_resource type="Script" uid="uid://c1vkusaxskl47" path="res://player/ship_player.gd" id="1_s4ia2"]
+[ext_resource type="Script" uid="uid://0s8x463ge5e0" path="res://player/node.gd" id="2_0ufj0"]
 [ext_resource type="PackedScene" uid="uid://bjxohqhjakuty" path="res://player/camra.tscn" id="2_dnmph"]
-[ext_resource type="Script" path="res://player/going_up_ship.gd" id="4_5s1mt"]
-[ext_resource type="Script" path="res://player/falling_ship.gd" id="5_umswd"]
-[ext_resource type="Script" path="res://player/idle_ship.gd" id="6_on02l"]
-[ext_resource type="Script" path="res://player/jump_ship.gd" id="7_tl1av"]
-[ext_resource type="Script" path="res://player/running_state.gd" id="9_ei2vd"]
+[ext_resource type="Script" uid="uid://dqrbqibyh1sy" path="res://player/going_up_ship.gd" id="4_5s1mt"]
+[ext_resource type="Script" uid="uid://dl3syey1w5cpy" path="res://player/falling_ship.gd" id="5_umswd"]
+[ext_resource type="Script" uid="uid://b7co75jw31jv5" path="res://player/idle_ship.gd" id="6_on02l"]
+[ext_resource type="Script" uid="uid://davce36xq0v2x" path="res://player/jump_ship.gd" id="7_tl1av"]
+[ext_resource type="Script" uid="uid://p7nensnitiny" path="res://player/running_state.gd" id="9_ei2vd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vlw8v"]
 

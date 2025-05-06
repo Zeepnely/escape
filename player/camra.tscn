@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjxohqhjakuty"]
 
-[ext_resource type="Script" path="res://player/camra.gd" id="1_5len3"]
+[ext_resource type="Script" uid="uid://cfkgdscjygbdv" path="res://player/camra.gd" id="1_5len3"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_a42i1"]
 fractal_type = 2

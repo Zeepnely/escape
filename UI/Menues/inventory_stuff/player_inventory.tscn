@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvm3s5tbkflwh"]
 
-[ext_resource type="Script" path="res://UI/Menues/inventory_stuff/player_inventory.gd" id="1_1bd3b"]
+[ext_resource type="Script" uid="uid://b80jcrkmnvrug" path="res://UI/Menues/inventory_stuff/player_inventory.gd" id="1_1bd3b"]
 [ext_resource type="PackedScene" uid="uid://ckp61fwld1g4u" path="res://UI/Menues/inventory_stuff/off_plannet_inventory.tscn" id="2_7o01j"]
 
 [node name="PlayerInventory" type="Control"]

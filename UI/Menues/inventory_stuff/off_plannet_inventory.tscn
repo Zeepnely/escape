@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckp61fwld1g4u"]
 
-[ext_resource type="Script" path="res://UI/Menues/inventory_stuff/off_plannet_inventory.gd" id="1_rq5no"]
+[ext_resource type="Script" uid="uid://bp5phy4sh08ep" path="res://UI/Menues/inventory_stuff/off_plannet_inventory.gd" id="1_rq5no"]
 
 [node name="OffPlannetInventory" type="Control"]
 layout_mode = 3

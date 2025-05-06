@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmtuyd6cfc6eq"]
 
-[ext_resource type="Script" path="res://UI/Menues/part_change_menue.gd" id="1_evh15"]
+[ext_resource type="Script" uid="uid://7pvnv8t4fycq" path="res://UI/Menues/part_change_menue.gd" id="1_evh15"]
 [ext_resource type="PackedScene" uid="uid://bbqkx52cvdkgc" path="res://UI/Menues/inventory_stuff/item_slot_two.tscn" id="2_2ydds"]
 [ext_resource type="PackedScene" uid="uid://ckp61fwld1g4u" path="res://UI/Menues/inventory_stuff/off_plannet_inventory.tscn" id="2_513lb"]
 
